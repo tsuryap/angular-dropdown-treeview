@@ -1,0 +1,6 @@
+<div >
+    <input #filter type="text" (click)='click($event)' class='col-12' value={{selection?.label}} readonly>
+    <div class="dropdown-section"  [ngClass]='{"hide": visible == false}' [attr.id]='id'> 
+            <p-tree [value]="treeData" selectionMode="single" [(selection)]="selection"  (onNodeSelect)="nodeSelect($event)"> </p-tree>
+    </div>
+</div>
